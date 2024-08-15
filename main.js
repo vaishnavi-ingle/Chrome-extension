@@ -17,6 +17,6 @@ function renderList() {
        <a target='_blank' href='${myLeads[i]} ' >" + myLeads[i] + "</a> 
     </li> 
     `;
-
+  }
   ulEl.innerHTML = listItems;
 }

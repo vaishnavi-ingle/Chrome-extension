@@ -10,7 +10,11 @@ if(leadsFromLocalStorage){
   renderList()
 }
 
-
+deleteBtn.addEventListener("dblclick", function(){
+  myLeads = []
+  localStorage.clear()
+  renderList()
+})
 
 
   inputBtn.addEventListener("click", function () {

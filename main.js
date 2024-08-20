@@ -2,19 +2,24 @@ let inputBtn = document.getElementById("input-btn");
 let inputEl = document.getElementById("input-el");
 let myLeads = [];
 const ulEl = document.getElementById("ul-el");
+const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
 
-inputBtn.addEventListener("click", function () {
-  myLeads.push(inputEl.value);
-  renderList();
-  inputEl.value = "";
-
-  localStorage.setItem("myLeads", JSON.stringify(myLeads))
+if(leadsFromLocalStorage){
+  myLeads = leadsFromLocalStorage
   renderList()
+}
 
-  console.log(localStorage.getItem("myLeads"))
 
+  inputBtn.addEventListener("click", function () {
+    myLeads.push(inputEl.value);
+    renderList();
+    inputEl.value = "";
 
-});
+    localStorage.setItem("myLeads", JSON.stringify(myLeads));
+    renderList();
+
+    console.log(localStorage.getItem("myLeads"));
+  });
 
 function renderList() {
   let listItems = " ";

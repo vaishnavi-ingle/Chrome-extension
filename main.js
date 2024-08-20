@@ -3,11 +3,14 @@ let inputEl = document.getElementById("input-el");
 let myLeads = [];
 const ulEl = document.getElementById("ul-el");
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
+const deleteBtn = document.getElementById("delete-btn")
 
 if(leadsFromLocalStorage){
   myLeads = leadsFromLocalStorage
   renderList()
 }
+
+
 
 
   inputBtn.addEventListener("click", function () {

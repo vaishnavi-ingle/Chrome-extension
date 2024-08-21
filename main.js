@@ -7,7 +7,7 @@ const deleteBtn = document.getElementById("delete-btn")
 
 if(leadsFromLocalStorage){
   myLeads = leadsFromLocalStorage
-  renderList()
+  renderList(myLeads)
 }
 
 deleteBtn.addEventListener("dblclick", function(){

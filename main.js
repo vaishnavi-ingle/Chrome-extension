@@ -4,11 +4,21 @@ let myLeads = [];
 const ulEl = document.getElementById("ul-el");
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
 const deleteBtn = document.getElementById("delete-btn");
+const tabBtn = document.getElementById("tab-btn")
 
 if (leadsFromLocalStorage) {
   myLeads = leadsFromLocalStorage;
   render(myLeads);
 }
+
+const tabs = [
+  {url: "https://www.linkedin.com/in/per-harald-borgen/"}
+]
+
+tabBtn.addEventListener("click", function(){
+  
+})
+
 
 deleteBtn.addEventListener("dblclick", function () {
   myLeads = [];
